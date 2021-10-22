@@ -1,0 +1,150 @@
+*, 
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+
+}
+
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: hsl(210, 46%, 95%);
+    min-height: 100vh;
+    display: flex; 
+
+}
+
+.container {
+    display: grid;
+    margin: 5rem auto 5rem;
+    grid-template-columns: 1fr;
+    max-width: 55%;
+    grid-gap: 1.8rem;
+}
+
+.card {
+    padding: 2.1em;
+    border-radius: 10px;
+    box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.3);
+}
+.card-header {
+    display: flex;
+    flex-direction: row;
+    margin-bottom:2rem;
+
+}
+.name {
+    margin-left: 1rem;
+    margin-top: .2rem;
+    font-size: 1.2rem;
+}
+
+
+.profile-image {
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+}
+
+.card-one {
+    background-color: hsl(263, 55%, 52%);
+    background-image:url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position:right 5vh top 0;
+}
+.card-one .profile-image {
+    border: 3px solid rgba(207, 207, 207, 0.5) ;
+
+}
+.card-four .profile-image {
+    border: 3px solid rgba(117, 65, 200, 0.8);
+}
+.card-two {
+    background-color: hsl(217, 19%, 35%)
+
+}
+.card-three {
+    background-color: hsl(0, 0%, 100%);
+
+}
+
+.card-four {
+    background-color: hsl(219, 29%, 14%);
+}
+
+.card-five {
+    background-color: hsl(0, 0%, 100%);
+
+}
+.card-one .name, 
+.card-two .name,
+.card-four .name {
+    color: hsl(0, 0%, 81%);
+} 
+.verified {
+    opacity: 0.5; 
+    font-weight: 500;
+    font-size: .85rem;
+}
+
+
+.summary-p {
+    color: hsl(0, 0%, 96%);
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    margin-bottom: .8rem;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+
+
+}
+.card-three .summary-p,
+.card-five .summary-p {
+    color:rgba(0, 0, 0, 0.7);
+}
+
+
+.review {
+    color: hsl(0, 0%, 81%);
+    opacity: .7;
+    line-height: 1.3rem;
+    letter-spacing: .3px;
+}
+.card-three .review,
+.card-five .review {
+    opacity: 1;
+}
+
+
+@media (min-width: 650px) {
+
+    .container {
+        grid-template-columns:  repeat(4, 1fr);
+        grid-template-rows:  repeat(2, 1fr);
+        justify-content: space-around;
+        align-content: center;
+        grid-gap: 1.5rem;
+        max-width: 900px;   
+        /* max-height: 90vh !important; */
+
+    }
+    .card-one {
+        grid-area: 1 / 1 / 2 / 3;
+        background-position:right 10vh top 0;
+    }
+    .card-two {
+        grid-area: 1 / 3 / 2 / 4;
+    }
+    .card-three {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+    .card-four {
+        grid-area: 2 / 2 / 3 / 4;
+    }
+    .card-five {
+        grid-area: 1 / 4 / 3 / 5;
+    }
+}
