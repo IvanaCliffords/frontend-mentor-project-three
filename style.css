@@ -127,7 +127,7 @@ body {
         justify-content: space-around;
         align-content: center;
         grid-gap: 1.5rem;
-        max-width: 900px;   
+        max-width: 1000px;   
         /* max-height: 90vh !important; */
 
     }
